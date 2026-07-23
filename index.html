@@ -272,8 +272,45 @@
                 <h4>Local Guide & Logistic Support</h4>
                 <p class="bn">স্থানীয় গাইড, ভাষা সহায়তা, এয়ারপোর্ট পিক-আপ এবং ডক্টর অ্যাপয়েন্টমেন্ট সাপোর্ট। (Airport pickup and comprehensive support)</p>
             </div>
-        </div>
-    </section>
+        
+  </div> <!-- closes services-grid -->
+</section> <!-- closes services section -->
+            
+            <!-- Patient Service Request Form -->
+<section id="contact-form" style="padding: 40px 20px; max-width: 600px; margin: 0 auto;">
+  <h2 style="text-align: center;">Request a Medical Service</h2>
+  
+  <form action="https://formspree.io/f/mrenyblw" method="POST" enctype="multipart/form-data">
+    
+    <label for="name">Full Name *</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-top: 5px;"><br><br>
+
+    <label for="phone">Phone / WhatsApp Number *</label><br>
+    <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; margin-top: 5px;"><br><br>
+
+    <label for="email">Email Address *</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px;"><br><br>
+
+    <label for="service">Service Needed *</label><br>
+    <select id="service" name="service" required style="width: 100%; padding: 10px; margin-top: 5px;">
+      <option value="">-- Select a Service --</option>
+      <option value="Hospital Appointment">Hospital Appointment</option>
+      <option value="Medical Visa Assistance">Medical Visa Assistance</option>
+      <option value="Travel & Accommodation">Travel & Accommodation</option>
+      <option value="General Inquiry">General Inquiry</option>
+    </select><br><br>
+
+    <label for="description">Brief Description / Medical Summary *</label><br>
+    <textarea id="description" name="description" rows="4" placeholder="Please describe your medical needs or preferred hospital/doctor..." required style="width: 100%; padding: 10px; margin-top: 5px;"></textarea><br><br>
+
+    <!-- File Upload -->
+    <label for="document">Attach Medical Records / Documents (Optional):</label><br>
+    <small>Upload prescriptions, reports, or passport copy (PDF, DOC, DOCX, JPG, PNG)</small><br>
+    <input type="file" id="document" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="margin-top: 8px;"><br><br>
+
+    <button type="submit" class="cta-btn" style="width: 100%; padding: 12px; cursor: pointer;">Submit Request</button>
+  </form>
+</section>
 
     <!-- Footer -->
     <footer>
