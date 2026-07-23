@@ -62,29 +62,43 @@
             color: var(--primary);
         }
 
-        .header-btn {
-            background-color: var(--secondary);
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        .header-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-        /* Hero Section */
-        .hero {
-            background-color: var(--bg-light);
-            background-image: url('download.png');
-            background-size: cover;
-            background-position: center;
-            background-blend-mode: overlay;
-            text-align: center;
-            padding: 60px 20px;
-        }
+.social-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.social-btn:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+.social-btn.whatsapp {
+    background-color: #25d366;
+}
+
+.social-btn.facebook {
+    background-color: #1877f2;
+    font-family: Arial, sans-serif;
+}
+
+.social-btn.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aebe6 90%);
+}
 
         .hero h1 {
             color: var(--primary);
@@ -205,12 +219,18 @@
 
     <!-- Header -->
     <header>
-        <div class="logo-container">
-            <img src="IMG_3813.PNG" alt="BSI Logo" class="header-logo" onerror="this.style.display='none'">
-            <span class="brand-name">Bandhan Seva International</span>
-        </div>
-        <a href="https://wa.me/8801347011979" class="header-btn" target="_blank">💬 WhatsApp</a>
-    </header>
+    <div class="logo-container">
+        <img src="IMG_3813.PNG" alt="BSI Logo" class="header-logo" onerror="this.style.display='none'">
+        <span class="brand-name">Bandhan Seva International</span>
+    </div>
+    
+    <!-- Social Icon Buttons -->
+    <div class="header-socials">
+        <a href="https://wa.me/8801347011979" class="social-btn whatsapp" target="_blank" title="WhatsApp">💬</a>
+        <a href="https://www.facebook.com/profile.php?id=61591793426781" class="social-btn facebook" target="_blank" title="Facebook">f</a>
+        <a href="https://www.instagram.com/bandhansevainternational?igsh=Y3czaGtnZ29pZmw3&utm_source=qr" class="social-btn instagram" target="_blank" title="Instagram">📷</a>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section class="hero">
