@@ -198,7 +198,87 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
+/* Navigation Styles */
+.main-nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
 
+/* Destinations Section Styles */
+.destinations-section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+.dest-card {
+  background: var(--card-bg);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
+}
+.dest-card:hover {
+  transform: translateY(-4px);
+}
+.dest-badge {
+  display: inline-block;
+  background: #E0F2FE;
+  color: #0284C7;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+/* Form Styles */
+.form-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid var(--border-color);
+  max-width: 650px;
+  margin: 50px auto;
+}
+.form-group {
+  margin-bottom: 18px;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+.submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
         /* Footer */
         footer {
             background-color: var(--primary);
@@ -228,17 +308,17 @@
         <img src="IMG_3813.PNG" alt="BSI Logo" class="header-logo" onerror="this.style.display='none'">
         <span class="brand-name">Bandhan Seva International</span>
     </div>
-    
-    <!-- Social Icon Buttons -->
-    <div class="header-socials">
-    <a href="https://wa.me/8801347011979" target="_blank" title="WhatsApp" style="display: inline-flex; align-items: center;">
-  <img src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-icon-new-png-image_6315990.png" alt="WhatsApp" style="width: 34px; height: 34px; border-radius: 4px;">
-   </a>     
-    <a href="https://www.facebook.com/profile.php?id=61591793426781" class="social-btn facebook" target="_blank" title="Facebook">f</a>
-    <a href="https://www.instagram.com/bandhansevainternational?igsh=Y3czaGtnZ2pZm3" class="social-btn instagram" target="_blank" title="Instagram"><img src="Instagram-Icon.png" alt="Instagram" style="width: 20px; height: 20px; vertical-align: middle;"></a>
-    <a href="https://www.linkedin.com/company/bandhan-seva-international/" class="social-btn linkedin" target="_blank" title="LinkedIn"><img src="IMG_20260723_200220_685.png" alt="LinkedIn" style="width: 34px; height: 34px; vertical-align: middle;"></a>
-                   
-    </div>
+<!-- Navigation Bar -->
+  <nav class="main-nav">
+    <a href="#hero">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#services">Services</a>
+    <a href="#contact-form">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <a href="https://wa.me/8801347011979" target="_blank" class="nav-cta">WhatsApp</a>
+  </div>       
 </header>
 
     <!-- Hero Section -->
@@ -254,6 +334,47 @@
   <a href="https://wa.me/8801347011979" class="cta-btn" target="_blank">💬 Chat on WhatsApp</a>
         </div>
     </section>
+
+    <!-- Destinations Grid Section -->
+  <section id="destinations" class="destinations-section">
+    <div class="section-header">
+      <h3 style="text-align: center;">Medical Care Destinations</h3>
+      <p style="text-align: center;">Connecting you to accredited medical hubs across India</p>
+    </div>
+
+    <div class="destinations-grid">
+      <div class="dest-card">
+        <div class="dest-badge">Proximity Hub</div>
+        <h4>Kolkata</h4>
+        <p>Fast-track consultations, cardiology, and direct regional connectivity.</p>
+      </div>
+      <div class="dest-card">
+        <div class="dest-badge">Multi-Specialty</div>
+        <h4>Chennai</h4>
+        <p>World-class organ transplant centers and complex surgical care.</p>
+      </div>
+      <div class="dest-card">
+        <div class="dest-badge">Specialized Surgery</div>
+        <h4>Kerala</h4>
+        <p>Advanced medical treatment combined with holistic post-op recovery.</p>
+      </div>
+      <div class="dest-card">
+        <div class="dest-badge">Oncology & Tech</div>
+        <h4>Bengaluru</h4>
+        <p>Leading tech-driven oncology, neurology, and robotic surgery facilities.</p>
+      </div>
+      <div class="dest-card">
+        <div class="dest-badge">Super-Specialty</div>
+        <h4>Mumbai & New Delhi</h4>
+        <p>Premier medical institutes and globally recognized surgical specialists.</p>
+      </div>
+      <div class="dest-card">
+        <div class="dest-badge">Regional Access</div>
+        <h4>Meghalaya</h4>
+        <p>Dedicated coordination services for patient care in eastern regions.</p>
+      </div>
+    </div>
+  </section>
 
     <!-- Specialties Block -->
     <section id="services" class="specialties">
@@ -283,48 +404,54 @@
   </div> <!-- closes services-grid -->
 </section> <!-- closes services section -->
             
-            <!-- Patient Service Request Form -->
-<section id="contact-form" style="padding: 40px 20px; max-width: 600px; margin: 0 auto;">
-  <div style="text-align: center; margin-bottom: 25px;">
-  <h2 style="margin-bottom: 8px;">How Can We Help You?</h2>
-  <h3 style="color: #1e293b; margin-top: 0; font-weight: 600;">আমরা কীভাবে আপনাকে সাহায্য করতে পারি?</h3>
-  <p style="font-size: 0.95rem; color: #4b5563; max-width: 500px; margin: 10px auto 0 auto; line-height: 1.5;">
-    Fill out the form below for any information regarding medical services, visas, or hospital appointments.<br>
-    <span style="font-size: 0.9rem; color: #6b7280;">(চিকিৎসা সেবা, ভিসা বা নামী হাসপাতালে অ্যাপয়েন্টমেন্ট সংক্রান্ত যেকোনো তথ্যের জন্য নিচের ফর্মটি পূরণ করুন।)</span>
-  </p>
-  </div>
-  
-  <form action="https://formspree.io/f/mrenyblw" method="POST" enctype="multipart/form-data">
-    
-    <label for="name">Full Name *</label><br>
-    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-top: 5px;"><br><br>
+<!-- Patient Service Request Form -->
+  <section id="contact-form" class="form-container">
+    <div class="form-header">
+      <h2 style="text-align: center;">Request Medical Assistance</h2>
+      <p style="text-align: center;">Fill out the form below for assistance regarding medical services, visas, or hospital appointments.</p>
+    </div>
 
-    <label for="phone">Phone / WhatsApp Number *</label><br>
-    <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; margin-top: 5px;"><br><br>
+    <form action="https://formspree.io/f/mrenyblw" method="POST" enctype="multipart/form-data" class="modern-form">
+      <div class="form-group">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
 
-    <label for="email">Email Address *</label><br>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-top: 5px;"><br><br>
+      <div class="form-group">
+        <label for="phone">Phone / WhatsApp Number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX" required>
+      </div>
 
-    <label for="service">Service Needed *</label><br>
-    <select id="service" name="service" required style="width: 100%; padding: 10px; margin-top: 5px;">
-      <option value="">-- Select a Service --</option>
-      <option value="Hospital Appointment">Hospital Appointment</option>
-      <option value="Medical Visa Assistance">Medical Visa Assistance</option>
-      <option value="Travel & Accommodation">Travel & Accommodation</option>
-      <option value="General Inquiry">General Inquiry</option>
-    </select><br><br>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+      </div>
 
-    <label for="description">Brief Description / Medical Summary *</label><br>
-    <textarea id="description" name="description" rows="4" placeholder="Please describe your medical needs or preferred hospital/doctor..." required style="width: 100%; padding: 10px; margin-top: 5px;"></textarea><br><br>
+      <div class="form-group">
+        <label for="service">Service Needed *</label>
+        <select id="service" name="service" required>
+          <option value="">-- Select Required Service --</option>
+          <option value="Hospital Appointment">Doctor & Hospital Appointment</option>
+          <option value="Medical Visa Assistance">Medical Visa Assistance</option>
+          <option value="Travel & Accommodation">Travel & Accommodation</option>
+          <option value="General Inquiry">General Inquiry</option>
+        </select>
+      </div>
 
-    <!-- File Upload -->
-    <label for="document">Attach Medical Records / Documents (Optional):</label><br>
-    <small>Upload prescriptions, reports, or passport copy (PDF, DOC, DOCX, JPG, PNG)</small><br>
-    <input type="file" id="document" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="margin-top: 8px;"><br><br>
+      <div class="form-group">
+        <label for="description">Brief Description / Medical Summary *</label>
+        <textarea id="description" name="description" rows="4" placeholder="Please describe your medical query..." required></textarea>
+      </div>
 
-    <button type="submit" class="cta-btn" style="width: 100%; padding: 12px; cursor: pointer;">Submit Request</button>
-  </form>
-</section>
+      <div class="form-group file-group">
+        <label for="document">Attach Medical Records / Documents (Optional)</label>
+        <input type="file" id="document" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+        <small>Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)</small>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Assistance Request</button>
+    </form>
+  </section>
 
     <!-- Footer -->
     <footer>
