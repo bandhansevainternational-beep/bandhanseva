@@ -264,14 +264,31 @@
 }
 .dest-card {
   background: var(--card-bg);
-  padding: 24px;
+  padding: 0 0 24px 0;
   border-radius: 16px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
 }
+
 .dest-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.dest-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.dest-card .dest-badge,
+.dest-card h4,
+.dest-card p {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .dest-badge {
   display: inline-block;
@@ -310,6 +327,18 @@
   border: 1px solid var(--border-color);
   font-size: 0.95rem;
   box-sizing: border-box;
+  background-color: #ffffff;
+  color: var(--text-dark);
+}
+
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231e293b%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2FSVG%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.65em auto;
+  padding-right: 2.5rem;
 }
 .submit-btn {
   width: 100%;
@@ -508,6 +537,7 @@
       </div>
 
       <button type="submit" class="submit-btn" data-i18n="submit_btn">Submit Assistance Request</button>
+      </form>
       </section>
 
     <!-- Footer -->
