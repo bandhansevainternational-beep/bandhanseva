@@ -397,66 +397,22 @@
     </div>
   </div>
 </header>
+<!-- Example for Kolkata Card -->
+<div class="dest-card">
+  <img src="your-image-url.jpg" alt="Kolkata">
+  <div class="dest-badge">Proximity Hub</div>
+  <h4>Kolkata (কলকাতা)</h4>
+  <p>Fast-track consultations, cardiology, IVF, and direct regional connectivity.</p>
+  <button type="button" class="select-hosp-btn" onclick="selectHospitalAndScroll('Apollo Multispecialty, Kolkata')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+</div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1 style="text-align: center;">Your Trusted Bridge to Healthcare in India</h1>
-<p class="subtitle" style="text-align: center;">Complete Medical Tourism & Visa Assistance from Bangladesh to Kolkata</p>
-
-        <div class="bengali-banner">
-            আমরা অত্যন্ত বিশ্বস্ততার সাথে ভারতের যেকোনো নামী হাসপাতালে চিকিৎসার জন্য মেডিকেল ট্যুরিজম গাইডেন্স এবং দ্রুত ভিসা প্রসেসিং অ্যাসিস্ট্যান্স প্রদান করে থাকি।
-        </div>
-    </section>
-    
-    <!-- Destinations Grid Section -->
-  <section id="destinations" class="destinations-section">
-    <div class="section-header">
-      <h3 style="text-align: center;">Medical Care Destinations</h3>
-      <p style="text-align: center;" data-i18n="subheading">Connecting you to accredited medical hubs across India</p>
-    </div>
-
-    <div class="destinations-grid">
-      <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1558431382-27e303142255?q=80&w=800&auto=format&fit=crop" alt="Kolkata Howrah Bridge" style="width:100%; height:160px; object-fit:cover; border-radius:8px 8px 0 0;">
-        <div class="dest-badge">Proximity Hub</div>
-        <h4 data-i18n="kolkata_title">Kolkata</h4>
-        <p data-i18n="kolkata_desc">Fast-track consultations, cardiology, and direct regional connectivity.</p>
-      </div>
-
-      <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" alt="Chennai" style="width:100%; height:160px; object-fit:cover; border-radius:8px 8px 0 0;">
-        <div class="dest-badge">Multi-Specialty</div>
-        <h4 data-i18n="chennai_title">Chennai</h4>
-        <p data-i18n="chennai_desc">World-class organ transplant centers and complex surgical care.</p>
-      </div>
-
-      <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800&auto=format&fit=crop" alt="Kerala" style="width:100%; height:160px; object-fit:cover; border-radius:8px 8px 0 0;">
-        <div class="dest-badge">Specialized Surgery</div>
-        <h4 data-i18n="kerala_title">Kerala</h4>
-        <p data-i18n="kerala_desc">Advanced medical treatment combined with holistic post-op recovery.</p>
-      </div>
-
-      <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=800&auto=format&fit=crop" alt="Bengaluru" style="width:100%; height:160px; object-fit:cover; border-radius:8px 8px 0 0;">
-        <div class="dest-badge">Oncology & Tech</div>
-        <h4 data-i18n="bengaluru_title">Bengaluru</h4>
-<p data-i18n="bengaluru_desc">Leading tech-driven oncology, neurology, and robotic surgery facilities.</p>
-      </div>
-
-      <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?q=80&w=800&auto=format&fit=crop" alt="Mumbai & New Delhi" style="width:100%; height:160px; object-fit:cover; border-radius:8px 8px 0 0;">
-        <div class="dest-badge">Super-Specialty</div>
-        <h4 data-i18n="mumbai_title">Mumbai & New Delhi</h4>
-<p data-i18n="mumbai_desc">Premier medical institutes and globally recognized surgical specialists.</p>
-      </div>
-
-     <div class="dest-card">
-  <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800&auto=format&fit=crop" alt="Kerala">
-  <div class="dest-badge">Holistic & Care</div>
-  <h4 data-i18n="kerala_title">Kerala (কেরালা)</h4>
-  <p data-i18n="kerala_desc">World-class super-specialty care, advanced oncology, transplant surgeries, and medical tourism hubs.</p>
-  <button type="button" class="select-hosp-btn" onclick="selectHospitalAndScroll('Amrita Hospital, Kochi')">হাসপাতাল নির্বাচন করুন</button>
+<!-- Example for Chennai Card -->
+<div class="dest-card">
+  <img src="your-image-url.jpg" alt="Chennai">
+  <div class="dest-badge">Multi-Specialty</div>
+  <h4>Chennai (চেন্নাই)</h4>
+  <p>World-class organ transplant centers, fertility care, and complex surgical care.</p>
+  <button type="button" class="select-hosp-btn" onclick="selectHospitalAndScroll('Apollo Hospitals Greams Road, Chennai')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
 </div>
       <h3 style="text-align: center;">Our Specialties & Services</h3>
       <p style="text-align: center;">আমাদের সেবাসমূহ কাস্টমাইজযোগ্য (Customizable Services)</p>
@@ -505,17 +461,18 @@
         <input type="email" id="email" name="email" placeholder="example@mail.com" required>
       </div>
 <div class="form-group">
-  <label for="preferred-hospital" data-i18n="hosp_label">Preferred Hospital & Destination</label>
+  <label for="preferred-hospital" data-i18n="hosp_label">Preferred Hospital / IVF Center & Destination</label>
   <select id="preferred-hospital" name="hospital">
-    <option value="" data-i18n="hosp_default">-- Select Preferred Hospital / Region --</option>
-    
+    <option value="" data-i18n="hosp_default">-- Select Preferred Hospital / IVF Center --</option>
+
     <!-- Kolkata -->
     <optgroup label="Kolkata (কলকাতা)">
       <option value="Apollo Multispecialty, Kolkata">Apollo Multispecialty Hospital (Kolkata)</option>
-      <option value="Manipal Hospitals, Kolkata">Manipal Hospitals (Kolkata)</option>
       <option value="Fortis Hospital, Kolkata">Fortis Hospital (Anandapur, Kolkata)</option>
       <option value="Medica Superspecialty, Kolkata">Medica Superspecialty Hospital (Kolkata)</option>
       <option value="BM Birla Heart, Kolkata">BM Birla Heart Research Centre (Kolkata)</option>
+      <option value="Nova IVF Fertility, Kolkata">Nova IVF Fertility (Park Circus, Kolkata)</option>
+      <option value="Indira IVF, Kolkata">Indira IVF Center (Park Street, Kolkata)</option>
     </optgroup>
 
     <!-- Chennai -->
@@ -526,48 +483,46 @@
       <option value="Gleneagles Global, Chennai">Gleneagles Global Health City (Chennai)</option>
       <option value="Rela Hospital, Chennai">Rela Hospital & Institute (Chennai)</option>
       <option value="MIOT International, Chennai">MIOT International (Chennai)</option>
+      <option value="Apollo Fertility, Chennai">Apollo Fertility Center (Chennai)</option>
+      <option value="ART Fertility Clinics, Chennai">ART Fertility Clinic (Chennai)</option>
     </optgroup>
 
     <!-- Bengaluru -->
     <optgroup label="Bengaluru (বেঙ্গালুরু)">
       <option value="Narayana Health, Bengaluru">Narayana Health City (Bengaluru)</option>
-      <option value="Manipal Hospital Old Airport Rd, Bengaluru">Manipal Hospital (Old Airport Road, Bengaluru)</option>
-      <option value="Apollo Hospitals Bannerghatta, Bengaluru">Apollo Hospitals (Bannerghatta, Bengaluru)</option>
+      <option value="Manipal Hospital, Bengaluru">Manipal Hospital (Old Airport Road, Bengaluru)</option>
       <option value="Aster CMI, Bengaluru">Aster CMI Hospital (Bengaluru)</option>
-      <option value="Superhealth Hospitals, Bengaluru">Superhealth Hospitals (Koramangala, Bengaluru)</option>
+      <option value="Cloudnine Fertility, Bengaluru">Cloudnine Fertility Hospital (Bengaluru)</option>
+      <option value="Nova IVF Fertility, Bengaluru">Nova IVF Fertility (Bengaluru)</option>
     </optgroup>
 
     <!-- Kerala -->
     <optgroup label="Kerala (কেরালা)">
-      <option value="Amrita Hospital, Kochi">Amrita Hospital (Kochi, Kerala)</option>
-      <option value="Aster Medcity, Kochi">Aster Medcity (Kochi, Kerala)</option>
-      <option value="VPS Lakeshore, Kochi">VPS Lakeshore Hospital (Kochi, Kerala)</option>
-      <option value="KIMSHEALTH, Thiruvananthapuram">KIMSHEALTH (Thiruvananthapuram, Kerala)</option>
+      <option value="Amrita Hospital, Kochi">Amrita Hospital (Kochi)</option>
+      <option value="VPS Lakeshore, Kochi">VPS Lakeshore Hospital (Kochi)</option>
+      <option value="Aster Medcity, Kochi">Aster Medcity (Kochi)</option>
+      <option value="ARMC AEGIS Hospital & IVF, Kerala">ARMC AEGIS Hospital & IVF (Kerala)</option>
+      <option value="Craft Fertility Centre, Kerala">Craft Hospital & Fertility Centre (Kerala)</option>
     </optgroup>
 
-    <!-- Mumbai & New Delhi -->
-    <optgroup label="Mumbai & New Delhi (মুম্বাই ও নয়াদিল্লি)">
-      <option value="Kokilaben Hospital, Mumbai">Kokilaben Dhirubhai Ambani Hospital (Mumbai)</option>
-      <option value="Fortis FMRI, Gurugram">Fortis Memorial Research Institute (Gurugram)</option>
+    <!-- Mumbai & Delhi -->
+    <optgroup label="Mumbai & New Delhi (মুম্বাই ও দিল্লি)">
+      <option value="Kokilaben Dhirubhai Ambani, Mumbai">Kokilaben Dhirubhai Ambani Hospital (Mumbai)</option>
+      <option value="Medanta The Medicity, Gurugram/Delhi">Medanta - The Medicity (Gurugram/Delhi)</option>
+      <option value="Fortis Memorial Research Institute, Gurugram">Fortis Memorial Research Institute (Gurugram)</option>
       <option value="Max Super Speciality, New Delhi">Max Super Speciality Hospital (Saket, New Delhi)</option>
-      <option value="Medanta The Medicity, Gurugram">Medanta – The Medicity (Gurugram)</option>
+      <option value="Jaslok Fertiltree IVF, Mumbai">Jaslok Fertiltree IVF Centre (Mumbai)</option>
+      <option value="Indraprastha Apollo IVF, New Delhi">Indraprastha Apollo Fertility (New Delhi)</option>
     </optgroup>
 
     <!-- Meghalaya -->
-    <optgroup label="Meghalaya (মেঘালয়)">
-      <option value="Nazareth Hospital, Shillong">Nazareth Hospital (Shillong)</option>
+    <optgroup label="Meghalaya / Shillong (মেঘালয়)">
+      <option value="NEIGRIHMS, Shillong">NEIGRIHMS (Shillong)</option>
       <option value="Woodland Hospital, Shillong">Woodland Hospital (Shillong)</option>
+      <option value="Bethany Hospital, Shillong">Bethany Hospital (Shillong)</option>
     </optgroup>
   </select>
 </div>
-
-      <div class="form-group">
-        <label for="description" data-i18n="desc_label">Brief Description / Medical Summary *</label>
-        <textarea id="description" name="description" rows="4" data-i18n-placeholder="desc_placeholder" placeholder="Please describe your medical query..." required></textarea>
-      </div>
-
-      <div class="form-group file-group">
-        <label for="document" data-i18n="file_label">Attach Medical Records / Documents (Optional)</label>
         <input type="file" id="document" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
         <small data-i18n="file_hint">Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)</small>
       </div>
@@ -687,6 +642,16 @@
         });
       });
     });
+      function selectHospitalAndScroll(hospitalValue) {
+  var selectElem = document.getElementById('preferred-hospital');
+  if (selectElem) {
+    selectElem.value = hospitalValue;
+  }
+  var formSection = document.getElementById('contact-form');
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
   </script>
 
 
