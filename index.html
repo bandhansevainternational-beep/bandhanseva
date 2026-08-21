@@ -451,18 +451,13 @@
 <p data-i18n="mumbai_desc">Premier medical institutes and globally recognized surgical specialists.</p>
       </div>
 
-      <div class="dest-card">
-        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop" alt="Meghalaya" style="width:100%; height:160px; object-fit:cover; border-radius:8px 8px 0 0;">
-        <div class="dest-badge">Regional Access</div>
-        <h4 data-i18n="meghalaya_title">Meghalaya</h4>
-<p data-i18n="meghalaya_desc">Dedicated coordination services for patient care in eastern regions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Specialties Block -->
-  <section id="services" class="specialties">
-    <div class="section-header">
+     <div class="dest-card">
+  <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800&auto=format&fit=crop" alt="Kerala">
+  <div class="dest-badge">Holistic & Care</div>
+  <h4 data-i18n="kerala_title">Kerala (কেরালা)</h4>
+  <p data-i18n="kerala_desc">World-class super-specialty care, advanced oncology, transplant surgeries, and medical tourism hubs.</p>
+  <button type="button" class="select-hosp-btn" onclick="selectHospitalAndScroll('Amrita Hospital, Kochi')">হাসপাতাল নির্বাচন করুন</button>
+</div>
       <h3 style="text-align: center;">Our Specialties & Services</h3>
       <p style="text-align: center;">আমাদের সেবাসমূহ কাস্টমাইজযোগ্য (Customizable Services)</p>
     </div>
@@ -509,17 +504,62 @@
         <label for="email" data-i18n="email_label">Email Address *</label>
         <input type="email" id="email" name="email" placeholder="example@mail.com" required>
       </div>
+<div class="form-group">
+  <label for="preferred-hospital" data-i18n="hosp_label">Preferred Hospital & Destination</label>
+  <select id="preferred-hospital" name="hospital">
+    <option value="" data-i18n="hosp_default">-- Select Preferred Hospital / Region --</option>
+    
+    <!-- Kolkata -->
+    <optgroup label="Kolkata (কলকাতা)">
+      <option value="Apollo Multispecialty, Kolkata">Apollo Multispecialty Hospital (Kolkata)</option>
+      <option value="Manipal Hospitals, Kolkata">Manipal Hospitals (Kolkata)</option>
+      <option value="Fortis Hospital, Kolkata">Fortis Hospital (Anandapur, Kolkata)</option>
+      <option value="Medica Superspecialty, Kolkata">Medica Superspecialty Hospital (Kolkata)</option>
+      <option value="BM Birla Heart, Kolkata">BM Birla Heart Research Centre (Kolkata)</option>
+    </optgroup>
 
-      <div class="form-group">
-        <label for="service" data-i18n="service_label">Service Needed *</label>
-        <select id="service" name="service" required>
-          <option value="" data-i18n="service_default">-- Select Required Service --</option>
-          <option value="Hospital Appointment">Doctor & Hospital Appointment</option>
-          <option value="Medical Visa Assistance">Medical Visa Assistance</option>
-          <option value="Travel & Accommodation">Travel & Accommodation</option>
-          <option value="General Inquiry">General Inquiry</option>
-        </select>
-      </div>
+    <!-- Chennai -->
+    <optgroup label="Chennai (চেন্নাই)">
+      <option value="Apollo Hospitals Greams Road, Chennai">Apollo Hospitals (Greams Road, Chennai)</option>
+      <option value="Apollo Proton Cancer Centre, Chennai">Apollo Proton Cancer Centre (Chennai)</option>
+      <option value="MGM Healthcare, Chennai">MGM Healthcare (Chennai)</option>
+      <option value="Gleneagles Global, Chennai">Gleneagles Global Health City (Chennai)</option>
+      <option value="Rela Hospital, Chennai">Rela Hospital & Institute (Chennai)</option>
+      <option value="MIOT International, Chennai">MIOT International (Chennai)</option>
+    </optgroup>
+
+    <!-- Bengaluru -->
+    <optgroup label="Bengaluru (বেঙ্গালুরু)">
+      <option value="Narayana Health, Bengaluru">Narayana Health City (Bengaluru)</option>
+      <option value="Manipal Hospital Old Airport Rd, Bengaluru">Manipal Hospital (Old Airport Road, Bengaluru)</option>
+      <option value="Apollo Hospitals Bannerghatta, Bengaluru">Apollo Hospitals (Bannerghatta, Bengaluru)</option>
+      <option value="Aster CMI, Bengaluru">Aster CMI Hospital (Bengaluru)</option>
+      <option value="Superhealth Hospitals, Bengaluru">Superhealth Hospitals (Koramangala, Bengaluru)</option>
+    </optgroup>
+
+    <!-- Kerala -->
+    <optgroup label="Kerala (কেরালা)">
+      <option value="Amrita Hospital, Kochi">Amrita Hospital (Kochi, Kerala)</option>
+      <option value="Aster Medcity, Kochi">Aster Medcity (Kochi, Kerala)</option>
+      <option value="VPS Lakeshore, Kochi">VPS Lakeshore Hospital (Kochi, Kerala)</option>
+      <option value="KIMSHEALTH, Thiruvananthapuram">KIMSHEALTH (Thiruvananthapuram, Kerala)</option>
+    </optgroup>
+
+    <!-- Mumbai & New Delhi -->
+    <optgroup label="Mumbai & New Delhi (মুম্বাই ও নয়াদিল্লি)">
+      <option value="Kokilaben Hospital, Mumbai">Kokilaben Dhirubhai Ambani Hospital (Mumbai)</option>
+      <option value="Fortis FMRI, Gurugram">Fortis Memorial Research Institute (Gurugram)</option>
+      <option value="Max Super Speciality, New Delhi">Max Super Speciality Hospital (Saket, New Delhi)</option>
+      <option value="Medanta The Medicity, Gurugram">Medanta – The Medicity (Gurugram)</option>
+    </optgroup>
+
+    <!-- Meghalaya -->
+    <optgroup label="Meghalaya (মেঘালয়)">
+      <option value="Nazareth Hospital, Shillong">Nazareth Hospital (Shillong)</option>
+      <option value="Woodland Hospital, Shillong">Woodland Hospital (Shillong)</option>
+    </optgroup>
+  </select>
+</div>
 
       <div class="form-group">
         <label for="description" data-i18n="desc_label">Brief Description / Medical Summary *</label>
