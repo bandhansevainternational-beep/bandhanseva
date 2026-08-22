@@ -16,8 +16,8 @@
             --primary: #0b4f6c;
             --primary-light: #12729a;
             --secondary: #25d366;
-            --bg-light: #e6f4f9;        /* Soft ice-blue background matching your screenshot */
-            --card-bg: #ffffff;         /* Clean white background for service cards */
+            --bg-light: #e6f4f9;
+            --card-bg: #ffffff;
             --text-dark: #1e293b;
             --text-muted: #4a5568;
             --border-color: #cbd5e1;
@@ -66,96 +66,65 @@
             font-weight: 700;
             color: var(--primary);
         }
+
         @media (max-width: 768px) {
-    .main-nav {
-      display: none;
-    }
-
-    .brand-name {
-      font-size: 0.95rem;
-    }
-  }
-        .lang-switch {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background-color: #f0f4f8;
-    padding: 3px 8px;
-    border-radius: 20px;
-    border: 1px solid #cbd5e1;
-    margin-left: 15px;
-    margin-right: auto;
-    flex-shrink: 0;
-  }
-
-  .lang-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #64748b;
-    padding: 3px 8px;
-    border-radius: 12px;
-    transition: all 0.2s ease;
-  }
-
-  .lang-btn.active {
-    background-color: var(--primary, #0b4f6c);
-    color: #ffffff;
-  }
-
-  .divider {
-    font-size: 0.75rem;
-    color: #94a3b8;
-  }
-
-        .header-socials {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.social-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: transform 0.2s, opacity 0.2s;
-}
-
-.social-btn:hover {
-    transform: scale(1.08);
-    opacity: 0.9;
-}
-
-.social-btn.whatsapp {
-    background-color: #25d366;
-}
-
-.social-btn.facebook {
-    background-color: #1877f2;
-    font-family: Arial, sans-serif;
-}
-
-.social-btn.instagram {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aebe6 90%);
-}
-
-        .hero h1 {
-            color: var(--primary);
-            font-size: 2.2rem;
-            margin-bottom: 12px;
-            font-weight: 700;
+            .main-nav {
+                display: none;
+            }
+            .brand-name {
+                font-size: 0.95rem;
+            }
         }
 
-        .hero p.subtitle {
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background-color: #f0f4f8;
+            padding: 3px 8px;
+            border-radius: 20px;
+            border: 1px solid #cbd5e1;
+            margin-left: 15px;
+            margin-right: auto;
+            flex-shrink: 0;
+        }
+
+        .lang-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #64748b;
+            padding: 3px 8px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background-color: var(--primary);
+            color: #ffffff;
+        }
+
+        .divider {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+
+        .hero-section h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .hero-section .subtitle {
             color: var(--text-muted);
             font-size: 1.1rem;
             margin-bottom: 25px;
@@ -165,66 +134,124 @@
             background: rgba(255, 255, 255, 0.9);
             border-radius: 12px;
             padding: 20px;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
+            max-width: 850px;
+            margin: 0 auto 35px auto;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             color: var(--primary);
             font-size: 1.05rem;
             font-weight: 600;
+            line-height: 1.6;
         }
-        .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.6);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-  }
-  .modal-overlay.active { display: flex; }
-  .modal-content {
-    background: #fff;
-    padding: 24px;
-    border-radius: 12px;
-    max-width: 500px;
-    width: 90%;
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-  }
-  .modal-close {
-    position: absolute;
-    top: 12px; right: 16px;
-    font-size: 24px;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  .hospital-list { list-style: none; padding: 0; margin-top: 15px; }
-  .hospital-list li {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-    color: #0056b3;
-    font-weight: 500;
-  }
-  .hospital-list li:hover { background: #f4f8ff; }
 
-           .cta-btn {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: white;
-            text-decoration: none;
-            padding: 14px 28px;
-            border-radius: 30px;
+        .destinations-header h2 {
+            color: var(--text-dark);
+            font-size: 1.6rem;
             font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            transition: transform 0.2s;
+            margin-bottom: 6px;
         }
-        .cta-btn:hover {
-            transform: translateY(-2px);
+
+        .destinations-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
         }
+
+        /* Navigation Styles */
+        .main-nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Destinations Section Styles */
+        .destinations-section {
+            padding: 30px 20px 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .dest-card {
+            background: var(--card-bg);
+            padding: 0 0 24px 0;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dest-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .dest-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .dest-card .dest-badge,
+        .dest-card h4,
+        .dest-card p,
+        .dest-card button {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .dest-badge {
+            display: inline-block;
+            align-self: flex-start;
+            background: #E0F2FE;
+            color: #0284C7;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .dest-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .dest-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-primary {
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            color: var(--text-dark);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #f1f5f9;
+        }
+
         /* Services Section */
         .services {
             padding: 50px 20px;
@@ -233,10 +260,15 @@
             text-align: center;
         }
 
-        .services h2 {
+        .services h3 {
             color: var(--primary);
             font-size: 1.8rem;
-            margin-bottom: 40px;
+            margin-bottom: 5px;
+        }
+
+        .services-subtitle {
+            color: var(--text-muted);
+            margin-bottom: 30px;
         }
 
         .services-grid {
@@ -260,12 +292,7 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
 
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
+        .service-card h4 {
             color: var(--primary);
             font-size: 1.2rem;
             margin-bottom: 10px;
@@ -276,116 +303,105 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
-/* Navigation Styles */
-.main-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 600;
-  font-size: 0.95rem;
-}
 
-/* Destinations Section Styles */
-.destinations-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.destinations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-.dest-card {
-  background: var(--card-bg);
-  padding: 0 0 24px 0;
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  overflow: hidden;
-}
+        /* Modal Overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
 
-.dest-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-}
+        .modal-overlay.active { display: flex; }
 
-.dest-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
-}
+        .modal-content {
+            background: #fff;
+            padding: 24px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
 
-.dest-card .dest-badge,
-.dest-card h4,
-.dest-card p {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.dest-badge {
-  display: inline-block;
-  background: #E0F2FE;
-  color: #0284C7;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
+        .modal-close {
+            position: absolute;
+            top: 12px; right: 16px;
+            font-size: 24px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
 
-/* Form Styles */
-.form-container {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  border: 1px solid var(--border-color);
-  max-width: 650px;
-  margin: 50px auto;
-}
-.form-group {
-  margin-bottom: 18px;
-}
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: var(--text-dark);
-}
-.form-group input, .form-group select, .form-group textarea {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
-  font-size: 0.95rem;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  color: var(--text-dark);
-}
+        .hospital-list { list-style: none; padding: 0; margin-top: 15px; }
+        .hospital-list li {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            color: #0056b3;
+            font-weight: 500;
+        }
+        .hospital-list li:hover { background: #f4f8ff; }
 
-.form-group select {
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231e293b%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2FSVG%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 0.65em auto;
-  padding-right: 2.5rem;
-}
-.submit-btn {
-  width: 100%;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  color: #fff;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 1rem;
-  cursor: pointer;
-}
+        /* Form Styles */
+        .form-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            max-width: 650px;
+            margin: 50px auto;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            color: var(--text-dark);
+        }
+
+        .form-group select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231e293b%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2FSVG%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 0.65em auto;
+            padding-right: 2.5rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
         /* Footer */
         footer {
             background-color: var(--primary);
@@ -396,7 +412,7 @@
         }
 
         footer p {
-            font-size: 0.9 rem;
+            font-size: 0.9rem;
             opacity: 0.9;
             margin-bottom: 5px;
         }
@@ -410,404 +426,440 @@
 <body>
 
     <!-- Header -->
-<header>
-  <div class="logo-container">
-    <img src="BSI logo" alt="BSI Logo" class="header-logo" onerror="this.style.display='none'">
-    <span class="brand-name">Bandhan Seva International</span>
-  </div>
+    <header>
+        <div class="logo-container">
+            <img src="BSI logo" alt="BSI Logo" class="header-logo" onerror="this.style.display='none'">
+            <span class="brand-name">Bandhan Seva International</span>
+        </div>
 
-  <div style="display: flex; align-items: center; gap: 20px; margin-left: auto;">
-    <!-- Navigation Bar -->
-    <nav class="main-nav">
-    <a href="#hero" data-bn="হোম" data-en="Home">Home</a>
-<a href="#destinations" data-bn="গন্তব্য" data-en="Destinations">Destinations</a>
-<a href="#services" data-bn="সেবাসমূহ" data-en="Services">Services</a>
-    </nav>
+        <div style="display: flex; align-items: center; gap: 20px; margin-left: auto;">
+            <!-- Navigation Bar -->
+            <nav class="main-nav">
+                <a href="#hero" data-bn="হোম" data-en="Home">Home</a>
+                <a href="#destinations" data-bn="গন্তব্য" data-en="Destinations">Destinations</a>
+                <a href="#services" data-bn="সেবাসমূহ" data-en="Services">Services</a>
+            </nav>
 
-    <!-- Language Switcher (Now Pushed to the Far Right) -->
-    <div class="lang-switch">
-      <button class="lang-btn active">EN</button>
-      <span class="divider">|</span>
-      <button class="lang-btn">BN</button>
+            <!-- Language Switcher -->
+            <div class="lang-switch">
+                <button class="lang-btn active">EN</button>
+                <span class="divider">|</span>
+                <button class="lang-btn">BN</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <h1 data-i18n="hero_title">Your Trusted Bridge to Healthcare in India</h1>
+            <p class="subtitle" data-i18n="hero_subtitle">Complete Medical Tourism & Visa Assistance from Bangladesh to Kolkata</p>
+
+            <div class="bengali-banner">
+                <p data-i18n="bengali_banner">আমরা অত্যন্ত বিশ্বস্ততার সাথে ভারতের যেকোনো নামী হাসপাতালে চিকিৎসার জন্য মেডিকেল ট্যুরিজম গাইডেন্স এবং দ্রুত ভিসা প্রসেসিং অ্যাসিস্ট্যান্স প্রদান করে থাকি।</p>
+            </div>
+
+            <div class="destinations-header">
+                <h2 data-i18n="dest_title">Medical Care Destinations</h2>
+                <p data-i18n="dest_subtitle">Connecting you to accredited medical hubs across India</p>
+            </div>
+        </section>
+
+        <!-- Destinations Section -->
+        <section id="destinations" class="destinations-section">
+            <div class="destinations-grid">
+                <!-- Kolkata -->
+                <div class="dest-card">
+                    <img src="https://images.unsplash.com/photo-1558431382-27e303142255?q=80&w=800&auto=format&fit=crop" alt="Kolkata Howrah Bridge">
+                    <div class="dest-badge">Proximity Hub</div>
+                    <h4 data-i18n="kolkata_title">Kolkata (কলকাতা)</h4>
+                    <p data-i18n="kolkata_desc">Fast-track consultations, cardiology, IVF, and direct regional connectivity.</p>
+                    <button type="button" class="btn btn-primary" onclick="openHospitalModal('Kolkata')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+                </div>
+
+                <!-- Chennai -->
+                <div class="dest-card">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" alt="Chennai">
+                    <div class="dest-badge">Multi-Specialty</div>
+                    <h4 data-i18n="chennai_title">Chennai (চেন্নাই)</h4>
+                    <p data-i18n="chennai_desc">World-class organ transplant centers, fertility care, and complex surgical care.</p>
+                    <button type="button" class="btn btn-primary" onclick="openHospitalModal('Chennai')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+                </div>
+
+                <!-- Bengaluru -->
+                <div class="dest-card">
+                    <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=800&auto=format&fit=crop" alt="Bengaluru">
+                    <div class="dest-badge">Oncology & Tech</div>
+                    <h4 data-i18n="bengaluru_title">Bengaluru (বেঙ্গালুরু)</h4>
+                    <p data-i18n="bengaluru_desc">Leading tech-driven oncology, neurology, IVF centers, and robotic surgery facilities.</p>
+                    <button type="button" class="btn btn-primary" onclick="openHospitalModal('Bengaluru')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+                </div>
+
+                <!-- Kerala -->
+                <div class="dest-card">
+                    <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800&auto=format&fit=crop" alt="Kerala">
+                    <div class="dest-badge">Holistic & Care</div>
+                    <h4 data-i18n="kerala_title">Kerala (কেরালা)</h4>
+                    <p data-i18n="kerala_desc">Advanced medical treatment, top fertility clinics, and post-op recovery.</p>
+                    <button type="button" class="btn btn-primary" onclick="openHospitalModal('Kerala')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+                </div>
+
+                <!-- Mumbai & New Delhi -->
+                <div class="dest-card">
+                    <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?q=80&w=800&auto=format&fit=crop" alt="Mumbai & Delhi">
+                    <div class="dest-badge">Super-Specialty</div>
+                    <h4 data-i18n="mumbai_title">Mumbai & New Delhi (মুম্বাই ও নয়াদিল্লি)</h4>
+                    <p data-i18n="mumbai_desc">Premier medical institutes, globally recognized IVF experts, and specialists.</p>
+                    <button type="button" class="btn btn-primary" onclick="openHospitalModal('Mumbai')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+                </div>
+
+                <!-- Meghalaya -->
+                <div class="dest-card">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop" alt="Meghalaya">
+                    <div class="dest-badge">Regional Care</div>
+                    <h4 data-i18n="meghalaya_title">Meghalaya / Shillong (মেঘালয়)</h4>
+                    <p data-i18n="meghalaya_desc">Quality regional healthcare, specialized patient care, and consultations.</p>
+                    <button type="button" class="btn btn-primary" onclick="openHospitalModal('Meghalaya')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h3>Our Specialties & Services</h3>
+            <p class="services-subtitle">আমাদের সেবাসমূহ কাস্টমাইজযোগ্য (Customizable Services)</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Medical Visa Assistance & Processing</h4>
+                    <p class="bn">বাংলাদেশি রোগীদের জন্য দ্রুত ও সহজ মেডিকেল ভিসা প্রসেসিং সহায়তা। (Fast and efficient processing)</p>
+                </div>
+                <div class="service-card">
+                    <h4>Doctor Appointment & Hospital Selection</h4>
+                    <p class="bn">আপনার প্রয়োজন অনুযায়ী সঠিক ডাক্তার ও হাসপাতাল নির্বাচন। (Selecting the best doctors and hospitals)</p>
+                </div>
+                <div class="service-card">
+                    <h4>Premium Accommodation Support</h4>
+                    <p class="bn">ভ্রমণ ও সম্পূর্ণ আবাসন সহায়তা - হোটেল, গেস্ট হাউস এবং ডরমিটরি। (Hotels, guesthouses and dormitories)</p>
+                </div>
+                <div class="service-card">
+                    <h4>Local Guide & Logistic Support</h4>
+                    <p class="bn">স্থানীয় গাইড, ভাষা সহায়তা, এয়ারপোর্ট পিক-আপ এবং ডক্টর অ্যাপয়েন্টমেন্ট সাপোর্ট। (Airport pickup and comprehensive support)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patient Service Request Form -->
+        <section id="contact-form" class="form-container">
+            <div class="form-header">
+                <h2 style="text-align: center;" data-i18n="form_title">Request Medical Assistance</h2>
+                <p style="text-align: center; margin-bottom: 20px;" data-i18n="form_desc">Fill out the form below for assistance regarding medical services, visas, or hospital appointments.</p>
+            </div>
+
+            <form action="https://formspree.io/f/mrenyblw" method="POST" enctype="multipart/form-data" class="modern-form">
+                <div class="form-group">
+                    <label for="name" data-i18n="name_label">Full Name *</label>
+                    <input type="text" id="name" name="name" data-i18n-placeholder="name_placeholder" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" data-i18n="phone_label">Phone / WhatsApp Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" data-i18n="email_label">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferred-hospital" data-i18n="hosp_label">Preferred Hospital / IVF Center & Destination</label>
+                    <select id="preferred-hospital" name="hospital">
+                        <option value="" data-i18n="hosp_default">-- Select Preferred Hospital / IVF Center --</option>
+
+                        <!-- Kolkata -->
+                        <optgroup label="Kolkata (কলকাতা)">
+                            <option value="Apollo Multispecialty, Kolkata">Apollo Multispecialty Hospital (Kolkata)</option>
+                            <option value="Fortis Hospital, Kolkata">Fortis Hospital (Anandapur, Kolkata)</option>
+                            <option value="Medica Superspecialty, Kolkata">Medica Superspecialty Hospital (Kolkata)</option>
+                            <option value="BM Birla Heart, Kolkata">BM Birla Heart Research Centre (Kolkata)</option>
+                            <option value="Nova IVF Fertility, Kolkata">Nova IVF Fertility (Park Circus, Kolkata)</option>
+                            <option value="Indira IVF, Kolkata">Indira IVF Center (Park Street, Kolkata)</option>
+                        </optgroup>
+
+                        <!-- Chennai -->
+                        <optgroup label="Chennai (চেন্নাই)">
+                            <option value="Apollo Hospitals Greams Road, Chennai">Apollo Hospitals (Greams Road, Chennai)</option>
+                            <option value="Apollo Proton Cancer Centre, Chennai">Apollo Proton Cancer Centre (Chennai)</option>
+                            <option value="MGM Healthcare, Chennai">MGM Healthcare (Chennai)</option>
+                            <option value="Gleneagles Global, Chennai">Gleneagles Global Health City (Chennai)</option>
+                            <option value="Rela Hospital, Chennai">Rela Hospital & Institute (Chennai)</option>
+                            <option value="MIOT International, Chennai">MIOT International (Chennai)</option>
+                            <option value="Apollo Fertility, Chennai">Apollo Fertility Center (Chennai)</option>
+                            <option value="ART Fertility Clinics, Chennai">ART Fertility Clinic (Chennai)</option>
+                        </optgroup>
+
+                        <!-- Bengaluru -->
+                        <optgroup label="Bengaluru (বেঙ্গালুরু)">
+                            <option value="Narayana Health, Bengaluru">Narayana Health City (Bengaluru)</option>
+                            <option value="Manipal Hospital, Bengaluru">Manipal Hospital (Old Airport Road, Bengaluru)</option>
+                            <option value="Aster CMI, Bengaluru">Aster CMI Hospital (Bengaluru)</option>
+                            <option value="Cloudnine Fertility, Bengaluru">Cloudnine Fertility Hospital (Bengaluru)</option>
+                            <option value="Nova IVF Fertility, Bengaluru">Nova IVF Fertility (Bengaluru)</option>
+                        </optgroup>
+
+                        <!-- Kerala -->
+                        <optgroup label="Kerala (কেরালা)">
+                            <option value="Amrita Hospital, Kochi">Amrita Hospital (Kochi)</option>
+                            <option value="VPS Lakeshore, Kochi">VPS Lakeshore Hospital (Kochi)</option>
+                            <option value="Aster Medcity, Kochi">Aster Medcity (Kochi)</option>
+                            <option value="ARMC AEGIS Hospital & IVF, Kerala">ARMC AEGIS Hospital & IVF (Kerala)</option>
+                            <option value="Craft Fertility Centre, Kerala">Craft Hospital & Fertility Centre (Kerala)</option>
+                        </optgroup>
+
+                        <!-- Mumbai & Delhi -->
+                        <optgroup label="Mumbai & New Delhi (মুম্বাই ও দিল্লি)">
+                            <option value="Kokilaben Dhirubhai Ambani, Mumbai">Kokilaben Dhirubhai Ambani Hospital (Mumbai)</option>
+                            <option value="Medanta The Medicity, Gurugram/Delhi">Medanta - The Medicity (Gurugram/Delhi)</option>
+                            <option value="Fortis Memorial Research Institute, Gurugram">Fortis Memorial Research Institute (Gurugram)</option>
+                            <option value="Max Super Speciality, New Delhi">Max Super Speciality Hospital (Saket, New Delhi)</option>
+                            <option value="Jaslok Fertiltree IVF, Mumbai">Jaslok Fertiltree IVF Centre (Mumbai)</option>
+                            <option value="Indraprastha Apollo IVF, New Delhi">Indraprastha Apollo Fertility (New Delhi)</option>
+                        </optgroup>
+
+                        <!-- Meghalaya -->
+                        <optgroup label="Meghalaya / Shillong (মেঘালয়)">
+                            <option value="NEIGRIHMS, Shillong">NEIGRIHMS (Shillong)</option>
+                            <option value="Woodland Hospital, Shillong">Woodland Hospital (Shillong)</option>
+                            <option value="Bethany Hospital, Shillong">Bethany Hospital (Shillong)</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="document" data-i18n="file_label">Attach Medical Records / Documents (Optional)</label>
+                    <input type="file" id="document" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+                    <small data-i18n="file_hint">Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)</small>
+                </div>
+
+                <button type="submit" class="submit-btn" data-i18n="submit_btn">Submit Assistance Request</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Hospital Selection Modal -->
+    <div id="hospitalModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeHospitalModal()">&times;</button>
+            <h3 id="modalRegionTitle">Select Hospital / IVF Center</h3>
+            <ul id="modalHospitalList" class="hospital-list"></ul>
+        </div>
     </div>
-  </div>
-</header>
-<!-- Kolkata -->
-    <div class="dest-card">
-      <img src="https://images.unsplash.com/photo-1558431382-27e303142255?q=80&w=800&auto=format&fit=crop" alt="Kolkata Howrah Bridge">
-      <div class="dest-badge">Proximity Hub</div>
-      <h4>Kolkata (কলকাতা)</h4>
-      <p>Fast-track consultations, cardiology, IVF, and direct regional connectivity.</p>
-      <button type="button" class="btn btn-primary" onclick="selectHospitalAndScroll('Apollo Multispecialty, Kolkata')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
-    </div>
-
-    <!-- Chennai -->
-    <div class="dest-card">
-      <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=80&w=800&auto=format&fit=crop" alt="Chennai">
-      <div class="dest-badge">Multi-Specialty</div>
-      <h4>Chennai (চেন্নাই)</h4>
-      <p>World-class organ transplant centers, fertility care, and complex surgical care.</p>
-      <button type="button" class="btn btn-primary" onclick="selectHospitalAndScroll('Apollo Hospitals Greams Road, Chennai')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
-    </div>
-
-    <!-- Bengaluru -->
-    <div class="dest-card">
-      <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?q=80&w=800&auto=format&fit=crop" alt="Bengaluru">
-      <div class="dest-badge">Oncology & Tech</div>
-      <h4>Bengaluru (বেঙ্গালুরু)</h4>
-      <p>Leading tech-driven oncology, neurology, IVF centers, and robotic surgery facilities.</p>
-      <button type="button" class="btn btn-primary" onclick="selectHospitalAndScroll('Narayana Health, Bengaluru')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
-    </div>
-
-    <!-- Kerala -->
-    <div class="dest-card">
-      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=800&auto=format&fit=crop" alt="Kerala">
-      <div class="dest-badge">Holistic & Care</div>
-      <h4>Kerala (কেরালা)</h4>
-      <p>Advanced medical treatment, top fertility clinics, and post-op recovery.</p>
-      <button type="button" class="btn btn-primary" onclick="selectHospitalAndScroll('Amrita Hospital, Kochi')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
-    </div>
-
-    <!-- Mumbai & New Delhi -->
-    <div class="dest-card">
-      <img src="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?q=80&w=800&auto=format&fit=crop" alt="Mumbai & Delhi">
-      <div class="dest-badge">Super-Specialty</div>
-      <h4>Mumbai & New Delhi (মুম্বাই ও নয়াদিল্লি)</h4>
-      <p>Premier medical institutes, globally recognized IVF experts, and specialists.</p>
-      <button type="button" class="btn btn-primary" onclick="selectHospitalAndScroll('Kokilaben Dhirubhai Ambani, Mumbai')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
-    </div>
-
-    <!-- Meghalaya -->
-    <div class="dest-card">
-      <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=800&auto=format&fit=crop" alt="Meghalaya">
-      <div class="dest-badge">Regional Care</div>
-      <h4>Meghalaya / Shillong (মেঘালয়)</h4>
-      <p>Quality regional healthcare, specialized patient care, and consultations.</p>
-      <button type="button" class="btn btn-primary" onclick="selectHospitalAndScroll('NEIGRIHMS, Shillong')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
-    </div>
-      <h3 style="text-align: center;">Our Specialties & Services</h3>
-      <p style="text-align: center;">আমাদের সেবাসমূহ কাস্টমাইজযোগ্য (Customizable Services)</p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <h4>Medical Visa Assistance & Processing</h4>
-        <p class="bn">বাংলাদেশি রোগীদের জন্য দ্রুত ও সহজ মেডিকেল ভিসা প্রসেসিং সহায়তা। (Fast and efficient processing)</p>
-      </div>
-      <div class="service-card">
-        <h4>Doctor Appointment & Hospital Selection</h4>
-        <p class="bn">আপনার প্রয়োজন অনুযায়ী সঠিক ডাক্তার ও হাসপাতাল নির্বাচন। (Selecting the best doctors and hospitals)</p>
-      </div>
-      <div class="service-card">
-        <h4>Premium Accommodation Support</h4>
-        <p class="bn">ভ্রমণ ও সম্পূর্ণ আবাসন সহায়তা - হোটেল, গেস্ট হাউস এবং ডরমিটরি। (Hotels, guesthouses and dormitories)</p>
-      </div>
-      <div class="service-card">
-        <h4>Local Guide & Logistic Support</h4>
-        <p class="bn">স্থানীয় গাইড, ভাষা সহায়তা, এয়ারপোর্ট পিক-আপ এবং ডক্টর অ্যাপয়েন্টমেন্ট সাপোর্ট। (Airport pickup and comprehensive support)</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Patient Service Request Form -->
-  <section id="contact-form" class="form-container">
-    <div class="form-header">
-      <h2 style="text-align: center;" data-i18n="form_title">Request Medical Assistance</h2>
-      <p style="text-align: center;" data-i18n="form_desc">Fill out the form below for assistance regarding medical services, visas, or hospital appointments.</p>
-    </div>
-
-    <form action="https://formspree.io/f/mrenyblw" method="POST" enctype="multipart/form-data" class="modern-form">
-      <div class="form-group">
-        <label for="name" data-i18n="name_label">Full Name *</label>
-        <input type="text" id="name" name="name" data-i18n-placeholder="name_placeholder" placeholder="Enter your full name" required>
-      </div>
-
-      <div class="form-group">
-        <label for="phone" data-i18n="phone_label">Phone / WhatsApp Number *</label>
-        <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX" required>
-      </div>
-
-      <div class="form-group">
-        <label for="email" data-i18n="email_label">Email Address *</label>
-        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-      </div>
-<div class="form-group">
-  <label for="preferred-hospital" data-i18n="hosp_label">Preferred Hospital / IVF Center & Destination</label>
-  <select id="preferred-hospital" name="hospital">
-    <option value="" data-i18n="hosp_default">-- Select Preferred Hospital / IVF Center --</option>
-
-    <!-- Kolkata -->
-    <optgroup label="Kolkata (কলকাতা)">
-      <option value="Apollo Multispecialty, Kolkata">Apollo Multispecialty Hospital (Kolkata)</option>
-      <option value="Fortis Hospital, Kolkata">Fortis Hospital (Anandapur, Kolkata)</option>
-      <option value="Medica Superspecialty, Kolkata">Medica Superspecialty Hospital (Kolkata)</option>
-      <option value="BM Birla Heart, Kolkata">BM Birla Heart Research Centre (Kolkata)</option>
-      <option value="Nova IVF Fertility, Kolkata">Nova IVF Fertility (Park Circus, Kolkata)</option>
-      <option value="Indira IVF, Kolkata">Indira IVF Center (Park Street, Kolkata)</option>
-    </optgroup>
-
-    <!-- Chennai -->
-    <optgroup label="Chennai (চেন্নাই)">
-      <option value="Apollo Hospitals Greams Road, Chennai">Apollo Hospitals (Greams Road, Chennai)</option>
-      <option value="Apollo Proton Cancer Centre, Chennai">Apollo Proton Cancer Centre (Chennai)</option>
-      <option value="MGM Healthcare, Chennai">MGM Healthcare (Chennai)</option>
-      <option value="Gleneagles Global, Chennai">Gleneagles Global Health City (Chennai)</option>
-      <option value="Rela Hospital, Chennai">Rela Hospital & Institute (Chennai)</option>
-      <option value="MIOT International, Chennai">MIOT International (Chennai)</option>
-      <option value="Apollo Fertility, Chennai">Apollo Fertility Center (Chennai)</option>
-      <option value="ART Fertility Clinics, Chennai">ART Fertility Clinic (Chennai)</option>
-    </optgroup>
-
-    <!-- Bengaluru -->
-    <optgroup label="Bengaluru (বেঙ্গালুরু)">
-      <option value="Narayana Health, Bengaluru">Narayana Health City (Bengaluru)</option>
-      <option value="Manipal Hospital, Bengaluru">Manipal Hospital (Old Airport Road, Bengaluru)</option>
-      <option value="Aster CMI, Bengaluru">Aster CMI Hospital (Bengaluru)</option>
-      <option value="Cloudnine Fertility, Bengaluru">Cloudnine Fertility Hospital (Bengaluru)</option>
-      <option value="Nova IVF Fertility, Bengaluru">Nova IVF Fertility (Bengaluru)</option>
-    </optgroup>
-
-    <!-- Kerala -->
-    <optgroup label="Kerala (কেরালা)">
-      <option value="Amrita Hospital, Kochi">Amrita Hospital (Kochi)</option>
-      <option value="VPS Lakeshore, Kochi">VPS Lakeshore Hospital (Kochi)</option>
-      <option value="Aster Medcity, Kochi">Aster Medcity (Kochi)</option>
-      <option value="ARMC AEGIS Hospital & IVF, Kerala">ARMC AEGIS Hospital & IVF (Kerala)</option>
-      <option value="Craft Fertility Centre, Kerala">Craft Hospital & Fertility Centre (Kerala)</option>
-    </optgroup>
-
-    <!-- Mumbai & Delhi -->
-    <optgroup label="Mumbai & New Delhi (মুম্বাই ও দিল্লি)">
-      <option value="Kokilaben Dhirubhai Ambani, Mumbai">Kokilaben Dhirubhai Ambani Hospital (Mumbai)</option>
-      <option value="Medanta The Medicity, Gurugram/Delhi">Medanta - The Medicity (Gurugram/Delhi)</option>
-      <option value="Fortis Memorial Research Institute, Gurugram">Fortis Memorial Research Institute (Gurugram)</option>
-      <option value="Max Super Speciality, New Delhi">Max Super Speciality Hospital (Saket, New Delhi)</option>
-      <option value="Jaslok Fertiltree IVF, Mumbai">Jaslok Fertiltree IVF Centre (Mumbai)</option>
-      <option value="Indraprastha Apollo IVF, New Delhi">Indraprastha Apollo Fertility (New Delhi)</option>
-    </optgroup>
-
-    <!-- Meghalaya -->
-    <optgroup label="Meghalaya / Shillong (মেঘালয়)">
-      <option value="NEIGRIHMS, Shillong">NEIGRIHMS (Shillong)</option>
-      <option value="Woodland Hospital, Shillong">Woodland Hospital (Shillong)</option>
-      <option value="Bethany Hospital, Shillong">Bethany Hospital (Shillong)</option>
-    </optgroup>
-  </select>
-</div>
-        <input type="file" id="document" name="attachment" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
-        <small data-i18n="file_hint">Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)</small>
-      </div>
-
-      <button type="submit" class="submit-btn" data-i18n="submit_btn">Submit Assistance Request</button>
-      </form>
-      </section>
 
     <!-- Footer -->
     <footer>
         <p><strong>Bandhan Seva International</strong></p>
         <p>Dhaka, Bangladesh | Phone: <a href="tel:+8801347011979">+880 1347-011979</a></p>
         <p>📧: <a href="mailto:bandhansevainternational@gmail.com" style="color: inherit; text-decoration: underline;">bandhansevainternational@gmail.com</a></p>
+
         <!-- Social Media Links -->
-<div class="footer-social-links" style="display: flex; justify-content: center; align-items: center; gap: 18px; margin: 15px 0;">
-    <!-- WhatsApp -->
-    <a href="https://wa.me/8801347011979" target="_blank" title="WhatsApp">
-        <img src="Whatsapp-Icon.png" alt="WhatsApp" style="width: 32px; height: 32px; object-fit: cover; border-radius: 50%;">
-    </a>
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/bandhansevainternational?igsh=Y3czaGtnZ29pZmw3" target="_blank" title="Instagram">
-        <img src="Instagram-Icon.png" alt="Instagram" style="width: 30px; height: 30px; object-fit: cover; border-radius: 50%;">
-    </a>
-
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/share/195XqQZJ6D/" target="_blank" title="Facebook">
-        <img src="Facebook-Icon.jpeg" alt="Facebook" style="width: 30px; height: 30px; object-fit: cover; border-radius: 50%;">
-    </a>
-
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/company/bandhan-seva-international/" target="_blank" title="LinkedIn">
-        <img src="LinkedIn Icon.png" alt="LinkedIn" style="width: 30px; height: 30px; object-fit: cover; border-radius: 50%;">
-    </a>
-</div>
+        <div class="footer-social-links" style="display: flex; justify-content: center; align-items: center; gap: 18px; margin: 15px 0;">
+            <a href="https://wa.me/8801347011979" target="_blank" title="WhatsApp">
+                <img src="Whatsapp-Icon.png" alt="WhatsApp" style="width: 32px; height: 32px; object-fit: cover; border-radius: 50%;">
+            </a>
+            <a href="https://www.instagram.com/bandhansevainternational?igsh=Y3czaGtnZ29pZmw3" target="_blank" title="Instagram">
+                <img src="Instagram-Icon.png" alt="Instagram" style="width: 30px; height: 30px; object-fit: cover; border-radius: 50%;">
+            </a>
+            <a href="https://www.facebook.com/share/195XqQZJ6D/" target="_blank" title="Facebook">
+                <img src="Facebook-Icon.jpeg" alt="Facebook" style="width: 30px; height: 30px; object-fit: cover; border-radius: 50%;">
+            </a>
+            <a href="https://www.linkedin.com/company/bandhan-seva-international/" target="_blank" title="LinkedIn">
+                <img src="LinkedIn Icon.png" alt="LinkedIn" style="width: 30px; height: 30px; object-fit: cover; border-radius: 50%;">
+            </a>
+        </div>
         <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">© 2026 Bandhan Seva International. All rights reserved.</p>
     </footer>
-  <script>
-    const translations = {
-      en: {
-        subheading: "Connecting you to accredited medical hubs across India",
-        kolkata_title: "Kolkata",
-        kolkata_desc: "Fast-track consultations, cardiology, and direct regional connectivity.",
-        chennai_title: "Chennai",
-        chennai_desc: "World-class organ transplant centers and complex surgical care.",
-        kerala_title: "Kerala",
-        kerala_desc: "Advanced medical treatment combined with holistic post-op recovery.",
-        bengaluru_title: "Bengaluru",
-        bengaluru_desc: "Leading tech-driven oncology, neurology, and robotic surgery",
-        mumbai_title: "Mumbai & New Delhi",
-        mumbai_desc: "Premier medical institutes and globally recognized surgical",
-        meghalaya_title: "Meghalaya",
-        meghalaya_desc: "Dedicated coordination services for patient care in eastern regions.",
-        form_title: "Request Medical Assistance",
-        form_desc: "Fill out the form below for assistance regarding medical services, visas, or hospital appointments.",
-        name_label: "Full Name *",
-        name_placeholder: "Enter your full name",
-        phone_label: "Phone / WhatsApp Number *",
-        email_label: "Email Address *",
-        service_label: "Service Needed *",
-        service_default: "-- Select Required Service --",
-        desc_label: "Brief Description / Medical Summary *",
-        desc_placeholder: "Please describe your medical query...",
-        file_label: "Attach Medical Records / Documents (Optional)",
-        file_hint: "Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)",
-        submit_btn: "Submit Assistance Request"
-      },
-      bn: {
-        subheading: "ভারতের স্বীকৃত মেডিকেল হাবগুলির সাথে আপনাকে সংযুক্ত করা হচ্ছে",
-        kolkata_title: "কলকাতা",
-        kolkata_desc: "দ্রুত পরামর্শ, কার্ডিওলজি এবং সরাসরি আঞ্চলিক যোগাযোগ।",
-        chennai_title: "চেন্নাই",
-        chennai_desc: "বিশ্বমানের অঙ্গ প্রতিস্থাপন কেন্দ্র এবং জটিল সার্জারি চিকিৎসা।",
-        kerala_title: "কেরালা",
-        kerala_desc: "উন্নত চিকিৎসার সাথে হোলিস্টিক পোস্ট-অপারেটিভ রিকভারি।",
-        bengaluru_title: "বেঙ্গালুরু",
-        bengaluru_desc: "উন্নত প্রযুক্তি-নির্ভর অনকোলজি, নিউরোলজি এবং রোবোটিক সার্জারি।",
-        mumbai_title: "মুম্বাই এবং নতুন দিল্লি",
-        mumbai_desc: "শীর্ষস্থানীয় চিকিৎসা প্রতিষ্ঠান এবং বিশ্বব্যাপী স্বীকৃত সার্জারি।",
-        meghalaya_title: "মেঘালয়",
-        meghalaya_desc: "পূর্বাঞ্চলীয় অঞ্চলে রোগীদের চিকিৎসার জন্য নিবেদিত সমন্বয় সেবা।",
-        form_title: "চিকিৎসা সহায়তার অনুরোধ",
-        form_desc: "চিকিৎসা সেবা, ভিসা বা হাসপাতালের অ্যাপয়েন্টমেন্ট সংক্রান্ত সহায়তার জন্য নিচের ফরমটি পূরণ করুন",
-        name_label: "সম্পূর্ণ নাম *",
-        name_placeholder: "আপনার সম্পূর্ণ নাম লিখুন",
-        phone_label: "ফোন / হোয়াটসঅ্যাপ নম্বর *",
-        email_label: "ইমেইল ঠিকানা *",
-        service_label: "প্রয়োজনীয় সেবা *",
-        service_default: "-- প্রয়োজনীয় সেবা নির্বাচন করুন --",
-        desc_label: "সংক্ষিপ্ত বিবরণ / মেডিকেল সারসংক্ষেপ *",
-        desc_placeholder: "আপনার চিকিৎসা বিষয়ক বিবরণ লিখুন...",
-        file_label: "মেডিকেল রেকর্ড / নথি সংযুক্ত করুন (ঐচ্ছিক)",
-        file_hint: "প্রেসক্রিপশন, রিপোর্ট বা পাসপোর্টের কপি আপলোড করুন (PDF, DOC, JPG, PNG)",
-        submit_btn: "সহায়তার জন্য আবেদন জমা দিন"
-      }
-    };
-</script>
 
-<!-- Hospital Selection Modal -->
-<div id="hospitalModal" class="modal-overlay">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeHospitalModal()">&times;</button>
-    <h3 id="modalRegionTitle">Select Hospital / IVF Center</h3>
-    <ul id="modalHospitalList" class="hospital-list"></ul>
-  </div>
-</div>
+    <script>
+        const translations = {
+            en: {
+                hero_title: "Your Trusted Bridge to Healthcare in India",
+                hero_subtitle: "Complete Medical Tourism & Visa Assistance from Bangladesh to Kolkata",
+                bengali_banner: "আমরা অত্যন্ত বিশ্বস্ততার সাথে ভারতের যেকোনো নামী হাসপাতালে চিকিৎসার জন্য মেডিকেল ট্যুরিজম গাইডেন্স এবং দ্রুত ভিসা প্রসেসিং অ্যাসিস্ট্যান্স প্রদান করে থাকি।",
+                dest_title: "Medical Care Destinations",
+                dest_subtitle: "Connecting you to accredited medical hubs across India",
+                kolkata_title: "Kolkata",
+                kolkata_desc: "Fast-track consultations, cardiology, IVF, and direct regional connectivity.",
+                chennai_title: "Chennai",
+                chennai_desc: "World-class organ transplant centers and complex surgical care.",
+                kerala_title: "Kerala",
+                kerala_desc: "Advanced medical treatment combined with holistic post-op recovery.",
+                bengaluru_title: "Bengaluru",
+                bengaluru_desc: "Leading tech-driven oncology, neurology, and robotic surgery.",
+                mumbai_title: "Mumbai & New Delhi",
+                mumbai_desc: "Premier medical institutes and globally recognized surgical care.",
+                meghalaya_title: "Meghalaya",
+                meghalaya_desc: "Dedicated coordination services for patient care in eastern regions.",
+                form_title: "Request Medical Assistance",
+                form_desc: "Fill out the form below for assistance regarding medical services, visas, or hospital appointments.",
+                name_label: "Full Name *",
+                name_placeholder: "Enter your full name",
+                phone_label: "Phone / WhatsApp Number *",
+                email_label: "Email Address *",
+                hosp_label: "Preferred Hospital / IVF Center & Destination",
+                hosp_default: "-- Select Preferred Hospital / IVF Center --",
+                file_label: "Attach Medical Records / Documents (Optional)",
+                file_hint: "Upload prescriptions, reports, or passport copy (PDF, DOC, JPG, PNG)",
+                submit_btn: "Submit Assistance Request"
+            },
+            bn: {
+                hero_title: "ভারতে স্বাস্থ্যসেবার জন্য আপনার বিশ্বস্ত সেতু",
+                hero_subtitle: "বাংলাদেশ থেকে কলকাতা পর্যন্ত সম্পূর্ণ মেডিকেল ট্যুরিজম এবং ভিসা সহায়তা",
+                bengali_banner: "আমরা অত্যন্ত বিশ্বস্ততার সাথে ভারতের যেকোনো নামী হাসপাতালে চিকিৎসার জন্য মেডিকেল ট্যুরিজম গাইডেন্স এবং দ্রুত ভিসা প্রসেসিং অ্যাসিস্ট্যান্স প্রদান করে থাকি।",
+                dest_title: "মেডিকেল কেয়ার ডেস্টিনেশন",
+                dest_subtitle: "ভারতের স্বীকৃত মেডিকেল হাবগুলির সাথে আপনাকে সংযুক্ত করা হচ্ছে",
+                kolkata_title: "কলকাতা",
+                kolkata_desc: "দ্রুত পরামর্শ, কার্ডিওলজি এবং সরাসরি আঞ্চলিক যোগাযোগ।",
+                chennai_title: "চেন্নাই",
+                chennai_desc: "বিশ্বমানের অঙ্গ প্রতিস্থাপন কেন্দ্র এবং জটিল সার্জারি চিকিৎসা।",
+                kerala_title: "কেরালা",
+                kerala_desc: "উন্নত চিকিৎসার সাথে হোলিস্টিক পোস্ট-অপারেটিভ রিকভারি।",
+                bengaluru_title: "বেঙ্গালুরু",
+                bengaluru_desc: "উন্নত প্রযুক্তি-নির্ভর অনকোলজি, নিউরোলজি এবং রোবোটিক সার্জারি।",
+                mumbai_title: "মুম্বাই এবং নতুন দিল্লি",
+                mumbai_desc: "শীর্ষস্থানীয় চিকিৎসা প্রতিষ্ঠান এবং বিশ্বব্যাপী স্বীকৃত সার্জারি।",
+                meghalaya_title: "মেঘালয়",
+                meghalaya_desc: "পূর্বাঞ্চলীয় অঞ্চলে রোগীদের চিকিৎসার জন্য নিবেদিত সমন্বয় সেবা।",
+                form_title: "চিকিৎসা সহায়তার অনুরোধ",
+                form_desc: "চিকিৎসা সেবা, ভিসা বা হাসপাতালের অ্যাপয়েন্টমেন্ট সংক্রান্ত সহায়তার জন্য নিচের ফরমটি পূরণ করুন",
+                name_label: "সম্পূর্ণ নাম *",
+                name_placeholder: "আপনার সম্পূর্ণ নাম লিখুন",
+                phone_label: "ফোন / হোয়াটসঅ্যাপ নম্বর *",
+                email_label: "ইমেইল ঠিকানা *",
+                hosp_label: "পছন্দের হাসপাতাল / আইভিএফ সেন্টার ও গন্তব্য",
+                hosp_default: "-- পছন্দের হাসপাতাল / আইভিএফ সেন্টার নির্বাচন করুন --",
+                file_label: "মেডিকেল রেকর্ড / নথি সংযুক্ত করুন (ঐচ্ছিক)",
+                file_hint: "প্রেসক্রিপশন, রিপোর্ট বা পাসপোর্টের কপি আপলোড করুন (PDF, DOC, JPG, PNG)",
+                submit_btn: "সহায়তার জন্য আবেদন জমা দিন"
+            }
+        };
 
-<script>
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
 
-        const lang = e.target.textContent.trim().toLowerCase() === 'bn' ? 'bn' : 'en';
+                const lang = e.target.textContent.trim().toLowerCase() === 'bn' ? 'bn' : 'en';
 
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-          const key = el.getAttribute('data-i18n');
-          if (translations[lang] && translations[lang][key]) {
-            el.textContent = translations[lang][key];
-          }
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-placeholder');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.placeholder = translations[lang][key];
+                    }
+                });
+
+                document.querySelectorAll('nav.main-nav a').forEach(el => {
+                    const newText = el.getAttribute(`data-${lang}`);
+                    if (newText) el.textContent = newText;
+                });
+            });
         });
 
-        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-          const key = el.getAttribute('data-i18n-placeholder');
-          if (translations[lang] && translations[lang][key]) {
-            el.placeholder = translations[lang][key];
-          }
-      document.querySelectorAll('nav.main-nav a').forEach(el => {
-  const newText = el.getAttribute(`data-${lang}`);
-  if (newText) el.textContent = newText;
-});   
-        });
-      });
-    });
-      function selectHospitalAndScroll(hospitalValue) {
-  var selectElem = document.getElementById('preferred-hospital');
-  if (selectElem) {
-    selectElem.value = hospitalValue;
-  }
-  var formSection = document.getElementById('contact-form');
-  if (formSection) {
-    formSection.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-      const hospitalData = {
-  Kolkata: [
-    "Apollo Multispecialty, Kolkata",
-    "Fortis Hospital, Anandapur, Kolkata",
-    "Medica Super Specialty Hospital, Kolkata",
-    "Indira IVF, Kolkata",
-    "Nova IVF Fertility, Kolkata"
-  ],
-  Chennai: [
-    "Apollo Hospitals Greams Road, Chennai",
-    "MGM Healthcare, Chennai",
-    "MIOT International, Chennai",
-    "Gleneagles Global Health City, Chennai"
-  ],
-  Bengaluru: [
-    "Narayana Health City, Bengaluru",
-    "Manipal Hospital, Old Airport Road, Bengaluru",
-    "Fortis Hospital, Bannerghatta Road, Bengaluru",
-    "Nova IVF Fertility, Bengaluru"
-  ],
-  Kerala: [
-    "Amrita Hospital, Kochi",
-    "Aster Medcity, Kochi",
-    "VPS Lakeshore Hospital, Kochi"
-  ],
-  Mumbai: [
-    "Kokilaben Dhirubhai Ambani Hospital, Mumbai",
-    "Jaslok Hospital & Research Centre, Mumbai",
-    "Max Super Speciality Hospital, New Delhi",
-    "Fortis Escorts Heart Institute, New Delhi"
-  ],
-  Meghalaya: [
-    "NEIGRIHMS, Shillong",
-    "Civil Hospital, Shillong"
-  ]
-};
+        function selectHospitalAndScroll(hospitalValue) {
+            var selectElem = document.getElementById('preferred-hospital');
+            if (selectElem) {
+                selectElem.value = hospitalValue;
+            }
+            var formSection = document.getElementById('contact-form');
+            if (formSection) {
+                formSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
 
-function openHospitalModal(region) {
-  const modal = document.getElementById('hospitalModal');
-  const title = document.getElementById('modalRegionTitle');
-  const list = document.getElementById('modalHospitalList');
-  
-  if (!modal || !title || !list) return;
+        const hospitalData = {
+            Kolkata: [
+                "Apollo Multispecialty, Kolkata",
+                "Fortis Hospital, Kolkata",
+                "Medica Superspecialty, Kolkata",
+                "BM Birla Heart, Kolkata",
+                "Nova IVF Fertility, Kolkata",
+                "Indira IVF, Kolkata"
+            ],
+            Chennai: [
+                "Apollo Hospitals Greams Road, Chennai",
+                "Apollo Proton Cancer Centre, Chennai",
+                "MGM Healthcare, Chennai",
+                "Gleneagles Global, Chennai",
+                "Rela Hospital, Chennai",
+                "MIOT International, Chennai"
+            ],
+            Bengaluru: [
+                "Narayana Health, Bengaluru",
+                "Manipal Hospital, Bengaluru",
+                "Aster CMI, Bengaluru",
+                "Cloudnine Fertility, Bengaluru",
+                "Nova IVF Fertility, Bengaluru"
+            ],
+            Kerala: [
+                "Amrita Hospital, Kochi",
+                "VPS Lakeshore, Kochi",
+                "Aster Medcity, Kochi",
+                "ARMC AEGIS Hospital & IVF, Kerala",
+                "Craft Fertility Centre, Kerala"
+            ],
+            Mumbai: [
+                "Kokilaben Dhirubhai Ambani, Mumbai",
+                "Medanta The Medicity, Gurugram/Delhi",
+                "Fortis Memorial Research Institute, Gurugram",
+                "Max Super Speciality, New Delhi",
+                "Jaslok Fertiltree IVF, Mumbai",
+                "Indraprastha Apollo IVF, New Delhi"
+            ],
+            Meghalaya: [
+                "NEIGRIHMS, Shillong",
+                "Woodland Hospital, Shillong",
+                "Bethany Hospital, Shillong"
+            ]
+        };
 
-  title.innerText = `Hospitals & IVF Centers in ${region}`;
-  list.innerHTML = '';
+        function openHospitalModal(region) {
+            const modal = document.getElementById('hospitalModal');
+            const title = document.getElementById('modalRegionTitle');
+            const list = document.getElementById('modalHospitalList');
+            
+            if (!modal || !title || !list) return;
 
-  if (hospitalData[region]) {
-    hospitalData[region].forEach(hosp => {
-      const li = document.createElement('li');
-      li.innerText = hosp;
-      li.onclick = function() {
-        closeHospitalModal();
-        selectHospitalAndScroll(hosp);
-      };
-      list.appendChild(li);
-    });
-  }
+            title.innerText = `Hospitals & IVF Centers in ${region}`;
+            list.innerHTML = '';
 
-  modal.classList.add('active');
-}
+            if (hospitalData[region]) {
+                hospitalData[region].forEach(hosp => {
+                    const li = document.createElement('li');
+                    li.innerText = hosp;
+                    li.onclick = function() {
+                        closeHospitalModal();
+                        selectHospitalAndScroll(hosp);
+                    };
+                    list.appendChild(li);
+                });
+            }
 
-function closeHospitalModal() {
-  const modal = document.getElementById('hospitalModal');
-  if (modal) modal.classList.remove('active');
-}
-  </script>
+            modal.classList.add('active');
+        }
 
+        function closeHospitalModal() {
+            const modal = document.getElementById('hospitalModal');
+            if (modal) modal.classList.remove('active');
+        }
+    </script>
 
-<script src="//code.tidio.co/4fgcxemcdz0cofj2lo8hl6wvpwldqd2h.js" async></script>
-
+    <script src="//code.tidio.co/4fgcxemcdz0cofj2lo8hl6wvpwldqd2h.js" async></script>
 </body>
 </html>
