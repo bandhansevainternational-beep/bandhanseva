@@ -470,11 +470,11 @@
             <div class="destinations-grid">
                 <!-- Kolkata -->
                 <div class="dest-card">
-                    <img src="https://images.unsplash.com/photo-1558431382-27e303142255?q=80&w=800&auto=format&fit=crop" alt="Kolkata Howrah Bridge">
+                    <img src="https://images.unsplash.com/photo-1608882006782-b7b8a73b2210?q=80&w=800&auto=format&fit=crop" alt="Kolkata Howrah Bridge">
                     <div class="dest-badge">Proximity Hub</div>
                     <h4 data-i18n="kolkata_title">Kolkata (কলকাতা)</h4>
                     <p data-i18n="kolkata_desc">Fast-track consultations, cardiology, IVF, and direct regional connectivity.</p>
-                    <button type="button" class="btn btn-primary" onclick="openHospitalModal('Kolkata')">হাসপাতাল/আইভিএফ নির্বাচন করুন</button>
+                   <button type="button" class="btn btn-primary" data-i18n="select_hospital" onclick="openHospitalModal('Kolkata')">Select Hospital / IVF Center</button>
                 </div>
 
                 <!-- Chennai -->
@@ -700,6 +700,7 @@
                 mumbai_desc: "Premier medical institutes and globally recognized surgical care.",
                 meghalaya_title: "Meghalaya",
                 meghalaya_desc: "Dedicated coordination services for patient care in eastern regions.",
+                select_hospital: "Select Hospital / IVF Center",
                 form_title: "Request Medical Assistance",
                 form_desc: "Fill out the form below for assistance regarding medical services, visas, or hospital appointments.",
                 name_label: "Full Name *",
@@ -720,6 +721,7 @@
                 dest_subtitle: "ভারতের স্বীকৃত মেডিকেল হাবগুলির সাথে আপনাকে সংযুক্ত করা হচ্ছে",
                 kolkata_title: "কলকাতা",
                 kolkata_desc: "দ্রুত পরামর্শ, কার্ডিওলজি এবং সরাসরি আঞ্চলিক যোগাযোগ।",
+                select_hospital: "হাসপাতাল/আইভিএফ নির্বাচন করুন",
                 chennai_title: "চেন্নাই",
                 chennai_desc: "বিশ্বমানের অঙ্গ প্রতিস্থাপন কেন্দ্র এবং জটিল সার্জারি চিকিৎসা।",
                 kerala_title: "কেরালা",
@@ -729,7 +731,7 @@
                 mumbai_title: "মুম্বাই এবং নতুন দিল্লি",
                 mumbai_desc: "শীর্ষস্থানীয় চিকিৎসা প্রতিষ্ঠান এবং বিশ্বব্যাপী স্বীকৃত সার্জারি।",
                 meghalaya_title: "মেঘালয়",
-                meghalaya_desc: "পূর্বাঞ্চলীয় অঞ্চলে রোগীদের চিকিৎসার জন্য নিবেদিত সমন্বয় সেবা।",
+                meghalaya_desc: "পূর্বাঞ্চলীয় অঞ্চলে রোগীদের চিকিৎসার জন্য নিবেদিত সমন্বয় সেবা।"
                 form_title: "চিকিৎসা সহায়তার অনুরোধ",
                 form_desc: "চিকিৎসা সেবা, ভিসা বা হাসপাতালের অ্যাপয়েন্টমেন্ট সংক্রান্ত সহায়তার জন্য নিচের ফরমটি পূরণ করুন",
                 name_label: "সম্পূর্ণ নাম *",
@@ -752,6 +754,28 @@
                 const lang = e.target.textContent.trim().toLowerCase() === 'bn' ? 'bn' : 'en';
 
                 document.querySelectorAll('[data-i18n]').forEach(el => {
+                    function setLanguage(lang) {
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  const inputs = document.querySelectorAll('[data-i18n-placeholder]');
+  inputs.forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang] && translations[lang][key]) {
+      el.placeholder = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll('nav.main-nav a').forEach(el => {
+    const newText = el.getAttribute(`data-${lang}`);
+    if (newText) el.textContent = newText;
+  });
+}
                     const key = el.getAttribute('data-i18n');
                     if (translations[lang] && translations[lang][key]) {
                         el.textContent = translations[lang][key];
