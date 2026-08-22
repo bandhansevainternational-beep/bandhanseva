@@ -172,8 +172,45 @@
             font-size: 1.05rem;
             font-weight: 600;
         }
+        .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-overlay.active { display: flex; }
+  .modal-content {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute;
+    top: 12px; right: 16px;
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .hospital-list { list-style: none; padding: 0; margin-top: 15px; }
+  .hospital-list li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: #0056b3;
+    font-weight: 500;
+  }
+  .hospital-list li:hover { background: #f4f8ff; }
 
-        .cta-btn {
+           .cta-btn {
             display: inline-block;
             background-color: var(--secondary);
             color: white;
@@ -185,11 +222,9 @@
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
             transition: transform 0.2s;
         }
-
         .cta-btn:hover {
             transform: translateY(-2px);
         }
-
         /* Services Section */
         .services {
             padding: 50px 20px;
@@ -655,8 +690,19 @@
         submit_btn: "সহায়তার জন্য আবেদন জমা দিন"
       }
     };
+</script>
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
+<!-- Hospital Selection Modal -->
+<div id="hospitalModal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeHospitalModal()">&times;</button>
+    <h3 id="modalRegionTitle">Select Hospital / IVF Center</h3>
+    <ul id="modalHospitalList" class="hospital-list"></ul>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         e.target.classList.add('active');
@@ -675,6 +721,10 @@
           if (translations[lang] && translations[lang][key]) {
             el.placeholder = translations[lang][key];
           }
+      document.querySelectorAll('nav.main-nav a').forEach(el => {
+  const newText = el.getAttribute(`data-${lang}`);
+  if (newText) el.textContent = newText;
+});   
         });
       });
     });
@@ -687,6 +737,72 @@
   if (formSection) {
     formSection.scrollIntoView({ behavior: 'smooth' });
   }
+}
+      const hospitalData = {
+  Kolkata: [
+    "Apollo Multispecialty, Kolkata",
+    "Fortis Hospital, Anandapur, Kolkata",
+    "Medica Super Specialty Hospital, Kolkata",
+    "Indira IVF, Kolkata",
+    "Nova IVF Fertility, Kolkata"
+  ],
+  Chennai: [
+    "Apollo Hospitals Greams Road, Chennai",
+    "MGM Healthcare, Chennai",
+    "MIOT International, Chennai",
+    "Gleneagles Global Health City, Chennai"
+  ],
+  Bengaluru: [
+    "Narayana Health City, Bengaluru",
+    "Manipal Hospital, Old Airport Road, Bengaluru",
+    "Fortis Hospital, Bannerghatta Road, Bengaluru",
+    "Nova IVF Fertility, Bengaluru"
+  ],
+  Kerala: [
+    "Amrita Hospital, Kochi",
+    "Aster Medcity, Kochi",
+    "VPS Lakeshore Hospital, Kochi"
+  ],
+  Mumbai: [
+    "Kokilaben Dhirubhai Ambani Hospital, Mumbai",
+    "Jaslok Hospital & Research Centre, Mumbai",
+    "Max Super Speciality Hospital, New Delhi",
+    "Fortis Escorts Heart Institute, New Delhi"
+  ],
+  Meghalaya: [
+    "NEIGRIHMS, Shillong",
+    "Civil Hospital, Shillong"
+  ]
+};
+
+function openHospitalModal(region) {
+  const modal = document.getElementById('hospitalModal');
+  const title = document.getElementById('modalRegionTitle');
+  const list = document.getElementById('modalHospitalList');
+  
+  if (!modal || !title || !list) return;
+
+  title.innerText = `Hospitals & IVF Centers in ${region}`;
+  list.innerHTML = '';
+
+  if (hospitalData[region]) {
+    hospitalData[region].forEach(hosp => {
+      const li = document.createElement('li');
+      li.innerText = hosp;
+      li.onclick = function() {
+        closeHospitalModal();
+        selectHospitalAndScroll(hosp);
+      };
+      list.appendChild(li);
+    });
+  }
+
+  modal.classList.add('active');
+}
+
+function closeHospitalModal() {
+  const modal = document.getElementById('hospitalModal');
+  if (modal) modal.classList.remove('active');
 }
   </script>
 
