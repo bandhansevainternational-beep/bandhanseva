@@ -578,7 +578,7 @@
                         <option value="" data-i18n="hosp_default">-- Select Preferred Hospital / IVF Center --</option>
 
                         <!-- Kolkata -->
-                        <optgroup label="Kolkata (কলকাতা)">
+                        <optgroup label="Kolkata">
                             <option value="Apollo Multispecialty, Kolkata">Apollo Multispecialty Hospital (Kolkata)</option>
                             <option value="Fortis Hospital, Kolkata">Fortis Hospital (Anandapur, Kolkata)</option>
                             <option value="Medica Superspecialty, Kolkata">Medica Superspecialty Hospital (Kolkata)</option>
@@ -588,7 +588,7 @@
                         </optgroup>
 
                         <!-- Chennai -->
-                        <optgroup label="Chennai (চেন্নাই)">
+                        <optgroup label="Chennai">
                             <option value="Apollo Hospitals Greams Road, Chennai">Apollo Hospitals (Greams Road, Chennai)</option>
                             <option value="Apollo Proton Cancer Centre, Chennai">Apollo Proton Cancer Centre (Chennai)</option>
                             <option value="MGM Healthcare, Chennai">MGM Healthcare (Chennai)</option>
@@ -600,7 +600,7 @@
                         </optgroup>
 
                         <!-- Bengaluru -->
-                        <optgroup label="Bengaluru (বেঙ্গালুরু)">
+                        <optgroup label="Bengaluru">
                             <option value="Narayana Health, Bengaluru">Narayana Health City (Bengaluru)</option>
                             <option value="Manipal Hospital, Bengaluru">Manipal Hospital (Old Airport Road, Bengaluru)</option>
                             <option value="Aster CMI, Bengaluru">Aster CMI Hospital (Bengaluru)</option>
@@ -609,7 +609,7 @@
                         </optgroup>
 
                         <!-- Kerala -->
-                        <optgroup label="Kerala (কেরালা)">
+                        <optgroup label="Kerala">
                             <option value="Amrita Hospital, Kochi">Amrita Hospital (Kochi)</option>
                             <option value="VPS Lakeshore, Kochi">VPS Lakeshore Hospital (Kochi)</option>
                             <option value="Aster Medcity, Kochi">Aster Medcity (Kochi)</option>
@@ -618,7 +618,7 @@
                         </optgroup>
 
                         <!-- Mumbai & Delhi -->
-                        <optgroup label="Mumbai & New Delhi (মুম্বাই ও দিল্লি)">
+                        <optgroup label="Mumbai & New Delhi">
                             <option value="Kokilaben Dhirubhai Ambani, Mumbai">Kokilaben Dhirubhai Ambani Hospital (Mumbai)</option>
                             <option value="Medanta The Medicity, Gurugram/Delhi">Medanta - The Medicity (Gurugram/Delhi)</option>
                             <option value="Fortis Memorial Research Institute, Gurugram">Fortis Memorial Research Institute (Gurugram)</option>
@@ -628,7 +628,7 @@
                         </optgroup>
 
                         <!-- Meghalaya -->
-                        <optgroup label="Meghalaya / Shillong (মেঘালয়)">
+                        <optgroup label="Meghalaya / Shillong">
                             <option value="NEIGRIHMS, Shillong">NEIGRIHMS (Shillong)</option>
                             <option value="Woodland Hospital, Shillong">Woodland Hospital (Shillong)</option>
                             <option value="Bethany Hospital, Shillong">Bethany Hospital (Shillong)</option>
@@ -756,55 +756,42 @@
             }
         };
 
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
+    function setLanguage(lang) {
+    // Translate element text content
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
 
-                const lang = e.target.textContent.trim().toLowerCase() === 'bn' ? 'bn' : 'en';
+    // Translate input placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang] && translations[lang][key]) {
+            el.placeholder = translations[lang][key];
+        }
+    });
 
-                document.querySelectorAll('[data-i18n]').forEach(el => {
-                    function setLanguage(lang) {
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-
-  const inputs = document.querySelectorAll('[data-i18n-placeholder]');
-  inputs.forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (translations[lang] && translations[lang][key]) {
-      el.placeholder = translations[lang][key];
-    }
-  });
-
-  document.querySelectorAll('nav.main-nav a').forEach(el => {
-    const newText = el.getAttribute(`data-${lang}`);
-    if (newText) el.textContent = newText;
-  });
+    // Translate navigation items
+    document.querySelectorAll('nav.main-nav a').forEach(el => {
+        const newText = el.getAttribute(`data-${lang}`);
+        if (newText) el.textContent = newText;
+    });
 }
-                    const key = el.getAttribute('data-i18n');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.textContent = translations[lang][key];
-                    }
-                });
 
-                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                    const key = el.getAttribute('data-i18n-placeholder');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.placeholder = translations[lang][key];
-                    }
-                });
+// Language switch button click listener
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        
+        const targetBtn = e.target.closest('.lang-btn');
+        targetBtn.classList.add('active');
 
-                document.querySelectorAll('nav.main-nav a').forEach(el => {
-                    const newText = el.getAttribute(`data-${lang}`);
-                    if (newText) el.textContent = newText;
-                });
-            });
-        });
+        const lang = targetBtn.textContent.trim().toLowerCase().includes('bn') ? 'bn' : 'en';
+        setLanguage(lang);
+    });
+});
 
         function selectHospitalAndScroll(hospitalValue) {
             var selectElem = document.getElementById('preferred-hospital');
