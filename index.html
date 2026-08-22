@@ -786,6 +786,8 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         
         const targetBtn = e.target.closest('.lang-btn');
+        if (!targetBtn) return;
+        
         targetBtn.classList.add('active');
 
         const lang = targetBtn.textContent.trim().toLowerCase().includes('bn') ? 'bn' : 'en';
@@ -793,16 +795,16 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     });
 });
 
-        function selectHospitalAndScroll(hospitalValue) {
-            var selectElem = document.getElementById('preferred-hospital');
-            if (selectElem) {
-                selectElem.value = hospitalValue;
-            }
-            var formSection = document.getElementById('contact-form');
-            if (formSection) {
-                formSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+function selectHospitalAndScroll(hospitalValue) {
+    var selectElem = document.getElementById('preferred-hospital');
+    if (selectElem) {
+        selectElem.value = hospitalValue;
+    }
+    var formSection = document.getElementById('contact-form');
+    if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
         const hospitalData = {
             Kolkata: [
@@ -850,27 +852,32 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
             ]
         };
 
-        function openHospitalModal(region) {
-            const modal = document.getElementById('hospitalModal');
-            const title = document.getElementById('modalRegionTitle');
-            const list = document.getElementById('modalHospitalList');
-            
-            if (!modal || !title || !list) return;
+      function openHospitalModal(region) {
+    const modal = document.getElementById('hospitalModal');
+    const title = document.getElementById('modalRegionTitle');
+    const list = document.getElementById('modalHospitalList');
 
-            title.innerText = `Hospitals & IVF Centers in ${region}`;
-            list.innerHTML = '';
+    if (!modal || !title || !list) return;
 
-            if (hospitalData[region]) {
-                hospitalData[region].forEach(hosp => {
-                    const li = document.createElement('li');
-                    li.innerText = hosp;
-                    li.onclick = function() {
-                        closeHospitalModal();
-                        selectHospitalAndScroll(hosp);
-                    };
-                    list.appendChild(li);
-                });
-            }
+    // Normalize keys if the button text contains extra characters
+    let key = region;
+    if (region.includes('Mumbai')) key = 'Mumbai';
+    if (region.includes('Meghalaya') || region.includes('Shillong')) key = 'Meghalaya';
+
+    title.innerText = `Hospitals & IVF Centers in ${region}`;
+    list.innerHTML = '';
+
+    if (hospitalData[key]) {
+        hospitalData[key].forEach(hosp => {
+            const li = document.createElement('li');
+            li.innerText = hosp;
+            li.onclick = function() {
+                closeHospitalModal();
+                selectHospitalAndScroll(hosp);
+            };
+            list.appendChild(li);
+        });
+    }
 
             modal.classList.add('active');
         }
